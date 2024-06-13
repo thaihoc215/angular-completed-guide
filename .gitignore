@@ -44,3 +44,6 @@ Thumbs.db
 
 first-angular-app/node_modules
 first-angular-app/.vscode
+first-angular-app/.angular/cache
+
+*/node_modules
