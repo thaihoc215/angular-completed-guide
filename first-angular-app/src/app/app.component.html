@@ -1,7 +1,47 @@
-<app-header></app-header>
-<header>
+<app-header />
+<main>
+  <ul id="users">
+    <!-- @for / @if / @else only support on version 17 and above -->
+    <!-- @for (user of users; track user.id) { -->
+      <!-- structural directive -->
+      <li *ngFor="let user of users">
+        <!-- <app-user [id]="users[1].id" [avatar]="users[1].avatar" [name]="users[1].name" 
+        (select)="onSelectUser($event)"/> -->
+        <app-user 
+          [user]="user"
+          [selected]="user.id === selectedUserId"
+          (select)="onSelectUser($event)"/>
+      </li>
+    <!-- } -->
+    <!-- <li> -->
+      <!-- select -> eventbinding -> listen custom event from user component -->
+      <!-- <app-user 
+        [id]="users[0].id" [avatar]="users[0].avatar" [name]="users[0].name" 
+        (select)="onSelectUser($event)"/> -->
+        <!-- <app-user 
+        [user]="users[0]"
+        (select)="onSelectUser($event)"/> -->
+    <!-- </li> -->
+  </ul>
+
+  <!-- @if (selectedUser) { -->
+    <app-tasks 
+        *ngIf="selectedUser; else fallback" 
+        [userId]="selectedUser.id"
+        [name]="selectedUser?selectedUser.name : ''"/>
+  <!-- } @else { -->
+    <ng-template #fallback>
+      <p id="fallback">Select a user to see their tasks!</p>
+    </ng-template>
+    
+  <!-- } -->
+  
+
+</main>
+
+<!-- <header>
   <img src="assets/angular-logo.png" alt="The Angular logo: The letter 'A'" />
   <h1>Let's get started!</h1>
   
   <p>Time to learn all about Angular!</p>
-</header>
+</header> -->

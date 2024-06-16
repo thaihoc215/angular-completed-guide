@@ -30,3 +30,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 add component use CLI: ng generate component - ng g c <name>
+how will build a service in angular
