@@ -47,3 +47,5 @@ first-angular-app/.vscode
 first-angular-app/.angular/cache
 
 */node_modules
+*/.angular/cache
+*/.vscode

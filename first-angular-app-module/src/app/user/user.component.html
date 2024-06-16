@@ -1,0 +1,34 @@
+<app-card>
+    <!-- add event listener -->
+    <button [class.active]="selected" (click)="onSelectUser()">
+        <!-- property bidning syntax && output computed value -->
+        <!-- <img [src]="'assets/users/' + selectedUser.avatar" [alt]="selectedUser.name" /> -->
+        <!-- using getter for computed -->
+        <!-- <img 
+            [src]="imagePath" 
+            [alt]="selectedUser.name" /> -->
+
+        <!-- String interpolation -->
+        <!-- <span>{{selectedUser.name}}</span> -->
+
+        <!-- with signal -->
+        <!-- <img 
+            [src]="imagePath()" 
+            [alt]="selectedUser().name" /> -->
+        <!-- String interpolation -->
+        <!-- <span>{{selectedUser().name}}</span> -->
+
+        <!-- input signal -->
+        <!-- <img 
+            [src]="imagePath()" 
+            [alt]="name()" />
+        <span>{{name()}}</span> -->
+
+        <!-- Input from outside -->
+        <img 
+            [src]="imagePath" 
+            [alt]="user.name" />
+        <span>{{user.name}}</span>
+
+    </button>
+</app-card>
