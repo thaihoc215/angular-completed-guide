@@ -49,3 +49,4 @@ first-angular-app/.angular/cache
 */node_modules
 */.angular/cache
 */.vscode
+*/angular.json
