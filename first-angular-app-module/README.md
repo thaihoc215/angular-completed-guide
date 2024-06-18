@@ -31,3 +31,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 add component use CLI: ng generate component - ng g c <name>
 how will build a service in angular
+
+
+to work with ngModel, every angular app that uses angular modules => create root AppModule
