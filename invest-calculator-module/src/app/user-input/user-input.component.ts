@@ -5,8 +5,8 @@ import { InvestmentInput } from '../investment-input.model';
 
 @Component({
   selector: 'app-user-input',
-  standalone: true,
-  imports: [FormsModule], // for ngSubmit
+  // standalone: true,
+  // imports: [FormsModule], // for ngSubmit
   templateUrl: './user-input.component.html',
   styleUrl: './user-input.component.css',
 })
