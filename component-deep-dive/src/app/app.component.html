@@ -1,0 +1,20 @@
+<app-header />
+
+<main>
+  <div id="dashboard">
+
+    <!-- title (pass string as a value - no need 2 way binding) not [title] cause if go with the value evauated with typescript -->
+    <app-dashboard-item [image]="{src: 'status.png', alt: 'Server Status'}" title="Server Status">
+      <app-server-status />
+    </app-dashboard-item>
+
+    <app-dashboard-item [image]="{src: 'globe.png', alt: 'A globe'}" title="Traffic">
+      <app-traffic />
+    </app-dashboard-item>
+
+    <app-dashboard-item [image]="{src: 'list.png', alt: 'A list of items'}" title="Support Tickets">
+      <app-tickets />
+    </app-dashboard-item>
+
+  </div>
+</main>

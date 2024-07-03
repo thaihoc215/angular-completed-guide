@@ -1,0 +1,19 @@
+<!-- <span>
+    Submit
+</span>
+<span class="icon">
+    ⌲
+</span> -->
+
+<span>
+    <ng-content />
+</span>
+<!-- select from class -->
+<!-- <ng-content select=".icon"/>  -->
+<!-- select from ngProjectAs -->
+<span class="icon">
+    <ng-content select="icon">
+        <!-- define fallback content if no icon content in selector fail found / only work on version 18 and above -->
+        →
+    </ng-content>
+</span>
