@@ -1,0 +1,8 @@
+<button class="btn btn-primary" (click)="onToggleDetails()">Display Details</button>
+<p *ngIf="showSecret">Secret Password = tuna</p>
+<div [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}" 
+    [ngClass]="{'white-text': i >= 4}"
+    *ngFor="let logItem of log; let i = index">{{logItem}}</div>
+
+
+    <!-- *ngFor="let item of list; trackBy:item.id" -->
